@@ -1,13 +1,11 @@
-nbr = int(input("Entrez un nombre entier : "))
+x = int(input("Entrez un nombre entier : "))
+n = int(input("Entrez une puissance(nbr entier) : "))
 
-def derivees(nbr):
-    x="x"
-    if nbr == 0 or nbr == 1:
-        return x
-    elif nbr == 2:
-        return str(nbr)+x
+
+def derivees(x, n):
+    if n == 0:
+        return 1
     else:
-        return str(nbr)+x+"^"+str((nbr-1))
+        return x*derivees(x, n-1)
 
-
-print(derivees(nbr))
+print(derivees(x,n))
